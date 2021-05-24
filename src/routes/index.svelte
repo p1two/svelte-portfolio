@@ -3,18 +3,18 @@
 </script>
 
 <svelte:head>
-  <title>Home</title>
+  <title>Mozart's Portfolio</title>
   <meta name="description" content="Mozart's information" />
 </svelte:head>
 
 <section>
   <div class="about__me">
     <picture>
-      <source srcset="avatar.webp" type="image/webp" />
-      <img src="avatar.jpeg" alt="Mystery Person" width="200" height="200" />
+      <source srcset="/img/avatar.webp" type="image/webp" />
+      <img src="/img/avatar.jpeg" alt="Mystery Person" width="200" height="200" />
     </picture>
     <h1>Mozart Pistori Tomazetti</h1>
-    <h2>Python Enthusiast</h2>
+    <h2>GO and Svelte Enthusiast</h2>
     <div class="skills_projects_link">
       <a href="/projects">Projects/Skills</a>
     </div>

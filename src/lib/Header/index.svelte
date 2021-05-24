@@ -2,7 +2,7 @@
   import { page } from '$app/stores';
   import logo from './svelte-logo.svg';
   import Icon from 'fa-svelte';
-  import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
+  import { faGithub } from '@fortawesome/free-brands-svg-icons';
 </script>
 
 <header>

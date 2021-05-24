@@ -7,9 +7,8 @@ const config = {
   // for more information about preprocessors
   preprocess: preprocess(),
 
-  adapter: adapter(),
-
   kit: {
+    adapter: adapter(),
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte'
   }

@@ -25,7 +25,7 @@
 </main>
 
 <footer>
-  <p>Developed by <a href="https://mozartomazetti.netlify.app">Mozart Pistori Tomazetti</a></p>
+  <p>Developed by <a href="https://www.linkedin.com/in/mozart-tomazetti/">Mozart Pistori Tomazetti</a></p>
 </footer>
 
 <style lang="scss">

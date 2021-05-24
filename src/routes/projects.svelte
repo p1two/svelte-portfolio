@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import Icon from 'fa-svelte';
-  import { faVuejs } from '@fortawesome/free-brands-svg-icons/faVuejs';
+  import { faVuejs } from '@fortawesome/free-brands-svg-icons';
 
   let promise = Promise.resolve([]);
   let data = [];
@@ -35,14 +35,14 @@
   }
   function trimTitle(text: string): string {
     let title = text.replaceAll("-", " ").replaceAll("_", " ");
-    if(title.length > 15) {
+    if(title.length > 16) {
       return title.slice(0, 15) + ' ...';
     }
     return title;
   }
   function trimText(text: string): string {
-    if(text.length > 100) {
-      return text.slice(0, 100) + ' ...';
+    if(text.length > 121) {
+      return text.slice(0, 120) + ' ...';
     }
     return text;
   }
@@ -52,7 +52,7 @@
 </script>
 
 <svelte:head>
-  <title>Projects</title>
+  <title>Mozart's Projects</title>
   <meta name="description" content="Mozart's projects and skills list" />
 </svelte:head>
 
@@ -139,7 +139,7 @@
     position: absolute;
     width: 70%;
     height: 100%;
-    background-image: url(cards_bg_img.svg);
+    background-image: url(/img/cards_bg_img.svg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -204,7 +204,7 @@
   #skills_section {
     margin-top: 4rem;
     min-height: 300px;
-    background-image: url(skills_bg.svg);
+    background-image: url(/img/skills_bg.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: top left;
