@@ -1,9 +1,8 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import Icon from 'fa-svelte';
-  import { faVuejs } from '@fortawesome/free-brands-svg-icons';
 
-  let promise = Promise.resolve([]);
+  // let promise = Promise.resolve([]);
+  let promise: Promise<any[]>;
   let data = [];
   let projects = [];
   let skills: Array<string> = [];
@@ -22,26 +21,26 @@
     let response = await fetch(
       `https://api.github.com/users/pitwo42/repos?per_page=${perPage}&page=${page}`
     );
-    data = await response.json();
     if (response.ok) {
+      data = await response.json();
       return data;
-		} else {
-			throw new Error(data.message);
-		}
+    } else {
+      throw new Error(response.statusText);
+    }
   }
   function loadMore(): void {
     page++;
     fetchData();
   }
   function trimTitle(text: string): string {
-    let title = text.replaceAll("-", " ").replaceAll("_", " ");
-    if(title.length > 16) {
+    let title = text.replaceAll('-', ' ').replaceAll('_', ' ');
+    if (title.length > 16) {
       return title.slice(0, 15) + ' ...';
     }
     return title;
   }
   function trimText(text: string): string {
-    if(text.length > 121) {
+    if (text.length > 121) {
       return text.slice(0, 120) + ' ...';
     }
     return text;
@@ -237,7 +236,7 @@
   /* Media Query  */
   @media screen and (max-width: 768px) {
     .cards {
-      justify-content: space-evenly
+      justify-content: space-evenly;
     }
     .card__custom {
       flex-basis: 100%;

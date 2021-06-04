@@ -1,8 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import logo from './svelte-logo.svg';
-  import Icon from 'fa-svelte';
-  import { faGithub } from '@fortawesome/free-brands-svg-icons';
+  import github from './iconmonstr-github-1.svg';
 </script>
 
 <header>
@@ -18,7 +17,9 @@
     </svg>
     <ul>
       <li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-      <li class:active={$page.path === '/projects'}><a sveltekit:prefetch href="/projects">Projects</a></li>
+      <li class:active={$page.path === '/projects'}>
+        <a sveltekit:prefetch href="/projects">Projects</a>
+      </li>
       <li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
     </ul>
     <svg viewBox="0 0 2 3" aria-hidden="true">
@@ -27,13 +28,8 @@
   </nav>
 
   <div class="corner">
-    <a
-      href="https://github.com/pitwo42"
-      aria-label="My Github"
-      target="_blank"
-      rel="external noopener noreferrer"
-    >
-      <Icon icon={faGithub} definition="Github" />
+    <a href="https://github.com/pitwo42" target="_blank" rel="external noopener noreferrer">
+      <img class="github" src={github} alt="Github" />
     </a>
   </div>
 </header>
@@ -54,11 +50,13 @@
       width: 100%;
       height: 100%;
     }
-    img,
-    :global(svg) {
+    img {
       width: 2em;
       height: 2em;
       object-fit: contain;
+      &.github {
+        filter: invert(100%);
+      }
     }
   }
 

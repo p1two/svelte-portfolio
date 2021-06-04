@@ -10,12 +10,12 @@
     href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;900&display=swap"
     as="style"
   />
-  <noscript
-    ><link
+  <noscript>
+    <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;900&display=swap"
-    /></noscript
-  >
+    />
+  </noscript>
 </svelte:head>
 
 <Header />
@@ -25,7 +25,16 @@
 </main>
 
 <footer>
-  <p>Developed by <a href="https://www.linkedin.com/in/mozart-tomazetti/">Mozart Pistori Tomazetti</a></p>
+  <p>
+    Developed by
+    <a
+      href="https://www.linkedin.com/in/mozart-tomazetti/"
+      target="_blank"
+      rel="external noopener noreferrer"
+    >
+      Mozart Pistori Tomazetti
+    </a>
+  </p>
 </footer>
 
 <style lang="scss">
