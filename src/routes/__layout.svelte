@@ -48,7 +48,7 @@
     padding: 1rem;
     width: 100%;
     max-width: 1024px;
-    margin: 0 auto;
+    margin: var(--column-margin-top) auto 0;
     box-sizing: border-box;
   }
 
@@ -62,6 +62,6 @@
   :global(.favorite) {
     fill: var(--accent-color);
     position: relative;
-    top: 5px;
+    top: 0.3rem;
   }
 </style>

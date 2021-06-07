@@ -56,9 +56,9 @@
 </svelte:head>
 
 {#await promise}
-  <div class="loading">😴 Loading ...</div>
+  <div id="portfolio" class="loading">😴 Loading ...</div>
 {:then data}
-  <section id="portfolio" v-else>
+  <section id="portfolio">
     <h2>Projets</h2>
     <div class="cards d_flex">
       {#each projects as project}
@@ -104,7 +104,7 @@
     </div>
   </section>
 {:catch error}
-  <div class="error">
+  <div id="portfolio" class="error">
     <p>{error.message} 😥</p>
   </div>
 {/await}
@@ -188,10 +188,10 @@
   }
   /* Portfolio Page Section */
   #portfolio {
-    margin-top: 4rem;
+    margin-top: var(--column-margin-top);
     h2 {
       margin-left: 180px;
-      font-size: 44px;
+      font-size: 2.75rem;
       color: #f1edee;
       line-height: 2rem;
       &:first-child {

@@ -35,12 +35,12 @@
       line-height: 1.5rem;
       > h1 {
         margin: 20px 0 0;
-        font-size: 36px;
+        font-size: 2.25rem;
         font-weight: 900;
         color: var(--accent-color);
       }
       > h2 {
-        font-size: 28px;
+        font-size: 1.75rem;
         font-weight: 500;
       }
       > h1,
@@ -51,7 +51,7 @@
       }
       p {
         font-weight: 100;
-        font-size: 22px;
+        font-size: 1.4rem;
         padding: 2rem;
       }
     }
@@ -61,7 +61,7 @@
     > a {
       text-transform: uppercase;
       font-weight: 900;
-      font-size: 18px;
+      font-size: 1.1rem;
       line-height: 21px;
       &:hover {
         transition: all 0.5s ease-in-out;

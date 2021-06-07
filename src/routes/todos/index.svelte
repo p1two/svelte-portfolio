@@ -139,7 +139,7 @@
   }
 
   .new input {
-    font-size: 28px;
+    font-size: 1.75rem;
     width: 100%;
     padding: 0.5em 1em 0.3em 1em;
     box-sizing: border-box;
