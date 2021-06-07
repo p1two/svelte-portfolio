@@ -1,7 +1,7 @@
 <script lang="ts">
   import { page } from '$app/stores';
   import logo from './svelte-logo.svg';
-  import github from './iconmonstr-github-1.svg';
+  import Icon from '$lib/Icon/index.svelte';
 </script>
 
 <header>
@@ -28,8 +28,14 @@
   </nav>
 
   <div class="corner">
-    <a href="https://github.com/pitwo42" target="_blank" rel="external noopener noreferrer">
-      <img class="github" src={github} alt="Github" />
+    <a
+      href="https://github.com/pitwo42"
+      class="github"
+      aria-label="Github"
+      target="_blank"
+      rel="external noopener noreferrer"
+    >
+      <Icon icon="github" width="32" height="32" />
     </a>
   </div>
 </header>
@@ -49,14 +55,17 @@
       justify-content: center;
       width: 100%;
       height: 100%;
+      &.github {
+        fill: var(--pure-white);
+        &:hover {
+          fill: var(--accent-color);
+        }
+      }
     }
     img {
       width: 2em;
       height: 2em;
       object-fit: contain;
-      &.github {
-        filter: invert(100%);
-      }
     }
   }
 

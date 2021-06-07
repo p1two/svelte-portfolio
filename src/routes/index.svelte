@@ -14,7 +14,7 @@
       <img src="/img/avatar.jpeg" alt="Mystery Person" width="200" height="200" />
     </picture>
     <h1>Mozart Pistori Tomazetti</h1>
-    <h2>GO and Svelte Enthusiast</h2>
+    <h2>Go and Svelte Enthusiast</h2>
     <div class="skills_projects_link">
       <a href="/projects">Projects/Skills</a>
     </div>
@@ -37,7 +37,7 @@
         margin: 20px 0 0;
         font-size: 36px;
         font-weight: 900;
-        color: #db5461;
+        color: var(--accent-color);
       }
       > h2 {
         font-size: 28px;

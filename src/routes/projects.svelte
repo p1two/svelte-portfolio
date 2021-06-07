@@ -73,7 +73,13 @@
                 <h4>Updated at</h4>
                 <div>{new Date(project.updated_at).toDateString()}</div>
               </div>
-              <img class="avatar" src={project.owner.avatar_url} alt="Repository owner avatar" />
+              <img
+                class="avatar"
+                src={project.owner.avatar_url + '&size=60'}
+                alt="Repository owner avatar"
+                width="30px"
+                height="30px"
+              />
             </div>
           </div>
           <div class="card__custom__img" />
@@ -222,8 +228,8 @@
     }
   }
   .avatar {
-    width: 30px;
-    height: 30px;
+    // width: 30px;
+    // height: 30px;
     border-radius: 50%;
     margin: 0 1rem;
   }

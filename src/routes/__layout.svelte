@@ -1,5 +1,6 @@
 <script lang="ts">
   import Header from '$lib/Header/index.svelte';
+  import Icon from '$lib/Icon/index.svelte';
   import '../app.css';
 </script>
 
@@ -26,7 +27,9 @@
 
 <footer>
   <p>
-    Developed by
+    Developed with
+    <Icon icon="favorite" className="favorite" />
+    by
     <a
       href="https://www.linkedin.com/in/mozart-tomazetti/"
       target="_blank"
@@ -55,5 +58,10 @@
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+  }
+  :global(.favorite) {
+    fill: var(--accent-color);
+    position: relative;
+    top: 5px;
   }
 </style>
